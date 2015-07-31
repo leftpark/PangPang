@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,13 +6,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.leftpark.android.pangpang.MainActivity"
-    android:orientation="vertical" >
+    tools:context="com.leftpark.android.pangpang.MainActivity" >
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="768px"
         android:layout_height="253px"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:background="#FFC3C3C3" />
     
@@ -20,6 +20,8 @@
         android:id="@+id/linearLayout2"
         android:layout_width="768px"
         android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linearLayout1"
         android:orientation="horizontal"
         android:background="#FF000000" >
         
@@ -31,6 +33,13 @@
             android:text="Left"/>
         
         <Button
+            android:id="@+id/btn_shoot"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_weight="2"
+            android:text="Shoot"/>
+        
+        <Button
             android:id="@+id/btn_right"
             android:layout_width="200px"
             android:layout_height="100px"
@@ -39,4 +48,4 @@
         
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

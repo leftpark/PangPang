@@ -110,19 +110,14 @@ public class FigureView extends View{
 		
 		// ===============================
 		// check wit Layout
-		if (0 >= left) {
-			circle.setMX(CIRCLE_MOVEMENT_PIXEL);
-			isBump = true;
-		} else if (mLayoutWidth <= right) {
-			circle.setMX(-CIRCLE_MOVEMENT_PIXEL);
+		if (0 >= left || mLayoutWidth <= right) {
+			circle.setMX(-mx);
 			isBump = true;
 		}
 		circle.setCX(cx+circle.getMX());
 		
-		if (0 >= top) {
-			circle.setMY(CIRCLE_MOVEMENT_PIXEL);
-		} else if (mLayoutHeight <= bottom) {
-			circle.setMY(-CIRCLE_MOVEMENT_PIXEL);
+		if (30 >= top || mLayoutHeight <= bottom) {
+			circle.setMY(-my);
 		}
 		circle.setCY(cy+circle.getMY());
 		// ===============================
